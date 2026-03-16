@@ -217,6 +217,63 @@ footer{background:#2a2a2a;padding:52px var(--pad) 28px}
   .nav-links a{padding:4px 0}
 }
 
+
+/* Smaller laptop screens: reduce popup video window height so top/bottom are not cropped */
+@media (max-width: 1440px) and (max-height: 900px) {
+  .video-modal-content,
+  .video-popup,
+  .modal-video-content,
+  .video-lightbox-content,
+  .popup-video-inner {
+    width: min(88vw, 1180px) !important;
+    max-height: 82vh !important;
+  }
+
+  .video-modal iframe,
+  .video-modal video,
+  .video-modal-content iframe,
+  .video-modal-content video,
+  .video-popup iframe,
+  .video-popup video,
+  .modal-video-content iframe,
+  .modal-video-content video,
+  .video-lightbox-content iframe,
+  .video-lightbox-content video,
+  .popup-video-inner iframe,
+  .popup-video-inner video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 72vh !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+  .video-modal-content,
+  .video-popup,
+  .modal-video-content,
+  .video-lightbox-content,
+  .popup-video-inner {
+    width: min(84vw, 1080px) !important;
+    max-height: 76vh !important;
+  }
+
+  .video-modal iframe,
+  .video-modal video,
+  .video-modal-content iframe,
+  .video-modal-content video,
+  .video-popup iframe,
+  .video-popup video,
+  .modal-video-content iframe,
+  .modal-video-content video,
+  .video-lightbox-content iframe,
+  .video-lightbox-content video,
+  .popup-video-inner iframe,
+  .popup-video-inner video {
+    max-height: 66vh !important;
+  }
+}
+
 </style>
 </head>
 <body>
