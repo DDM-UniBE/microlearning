@@ -41,12 +41,12 @@ nav a.active{border-bottom-color:var(--red);color:var(--red)}
 .hero-image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(4,12,24,.42) 0%, rgba(4,12,24,.18) 28%, rgba(4,12,24,0) 52%);pointer-events:none}
 
 /* ── INTRO ── */
-.intro-block{background:var(--white);padding:64px var(--pad) 56px;border-bottom:1px solid var(--border)}
+.intro-block{background:var(--white);padding:64px 32px 56px var(--pad);border-bottom:1px solid var(--border)}
 .intro-eyebrow{display:none}
 .intro-subtitle{font-size:clamp(18px,2vw,24px);font-weight:300;line-height:1.4;color:var(--black);} 
 .intro-title{font-size:clamp(32px,4vw,52px);font-weight:300;line-height:1.1;color:var(--black);margin-bottom:20px;font-style:normal}
 .intro-title em{font-style:italic;font-weight:400;color:#d00000;}
-.intro-desc{font-size:16px;font-weight:300;color:var(--grey-mid);line-height:1.75;max-width:900px}
+.intro-desc{font-size:16px;font-weight:300;color:var(--grey-mid);line-height:1.75;max-width:980px}
 
 /* ── LIBRARY ── */
 .library{display:flex;align-items:flex-start;padding:0 0 0 var(--pad)}
@@ -305,6 +305,67 @@ footer{background:#2a2a2a;padding:52px var(--pad) 28px}
 }
 
 @media (max-width: 1280px), (max-height: 720px) {
+  .modal{
+    width: min(68vw, 620px) !important;
+    max-width: 620px !important;
+  }
+  .modal-header{
+    padding: 12px 16px 10px !important;
+  }
+  .modal-footer{
+    padding: 8px 16px !important;
+  }
+}
+
+
+/* Mobile: keep video popup larger again */
+@media (max-width: 640px) {
+  .modal-overlay{
+    padding: 12px !important;
+    align-items: center !important;
+  }
+  .modal{
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+  .modal-header{
+    padding: 14px 14px 12px !important;
+  }
+  .modal-footer{
+    padding: 10px 14px !important;
+  }
+}
+
+/* Desktop/laptop-only downsizing so mobile is not affected */
+@media (min-width: 641px) and (max-width: 1440px) and (max-height: 900px) {
+  .modal-overlay{
+    padding: 16px !important;
+    align-items: center !important;
+  }
+  .modal{
+    width: min(78vw, 760px) !important;
+    max-width: 760px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1366px), (min-width: 641px) and (max-height: 768px) {
+  .modal-overlay{
+    padding: 12px !important;
+    align-items: center !important;
+  }
+  .modal{
+    width: min(72vw, 700px) !important;
+    max-width: 700px !important;
+  }
+  .modal-header{
+    padding: 14px 18px 12px !important;
+  }
+  .modal-footer{
+    padding: 10px 18px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1280px), (min-width: 641px) and (max-height: 720px) {
   .modal{
     width: min(68vw, 620px) !important;
     max-width: 620px !important;
