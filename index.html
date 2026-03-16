@@ -274,6 +274,49 @@ footer{background:#2a2a2a;padding:52px var(--pad) 28px}
   }
 }
 
+
+/* Small laptop fix: make the video modal itself smaller */
+@media (max-width: 1440px) and (max-height: 900px) {
+  .modal-overlay{
+    padding: 16px !important;
+    align-items: center !important;
+  }
+  .modal{
+    width: min(78vw, 760px) !important;
+    max-width: 760px !important;
+  }
+}
+
+@media (max-width: 1366px), (max-height: 768px) {
+  .modal-overlay{
+    padding: 12px !important;
+    align-items: center !important;
+  }
+  .modal{
+    width: min(72vw, 700px) !important;
+    max-width: 700px !important;
+  }
+  .modal-header{
+    padding: 14px 18px 12px !important;
+  }
+  .modal-footer{
+    padding: 10px 18px !important;
+  }
+}
+
+@media (max-width: 1280px), (max-height: 720px) {
+  .modal{
+    width: min(68vw, 620px) !important;
+    max-width: 620px !important;
+  }
+  .modal-header{
+    padding: 12px 16px 10px !important;
+  }
+  .modal-footer{
+    padding: 8px 16px !important;
+  }
+}
+
 </style>
 </head>
 <body>
