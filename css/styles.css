@@ -452,7 +452,7 @@ footer{background:#2a2a2a;padding:52px var(--pad) 28px}
 .about-intro-text p:last-of-type{margin-bottom:0}
 .about-intro-visual img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 
-.mission-strip{background:var(--black);padding:64px var(--pad);margin-bottom:88px;position:relative;overflow:hidden}
+.mission-strip{background:#2a2a2a;padding:64px var(--pad);margin-bottom:88px;position:relative;overflow:hidden;width:100vw;margin-left:calc(-1 * var(--pad));}
 .mission-strip::before{content:'';position:absolute;inset:0;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cg fill='none' stroke='%23fff' stroke-width='1.5'%3E%3Cpath d='M40 0v40h-40M40 40h40v40M120 0v80M120 80h40v40M120 120h-40v40M80 160h-40v40M200 0v40h40M200 40h-40v40M160 80h40v40M200 120v40h40M160 160h40v40M0 120h40v40M0 200h40'/%3E%3Ccircle cx='40' cy='40' r='5' fill='%23fff'/%3E%3Ccircle cx='120' cy='80' r='5' fill='%23fff'/%3E%3Ccircle cx='200' cy='40' r='5' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");background-size:240px 240px;pointer-events:none}
 .mission-inner{max-width:760px;position:relative;z-index:1}
 .mission-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
