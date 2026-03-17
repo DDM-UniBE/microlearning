@@ -155,7 +155,7 @@ nav a.active{border-bottom-color:var(--red);color:var(--red)}
 /* ── FOOTER ── */
 footer{background:#2a2a2a;padding:52px var(--pad) 28px}
 .footer-top{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:40px;}
-.footer-tagline{font-size:clamp(18px,2vw,28px);font-weight:200;color:#fff;letter-spacing:0.08em;text-transform:uppercase;line-height:1.15;text-align:left;}
+.footer-tagline{font-size:clamp(18px,2vw,28px);font-weight:400;color:#fff;letter-spacing:0.05em;text-transform:uppercase;line-height:1.05;text-align:left;}
 .footer-logo-img{height:200px;width:auto;display:block}
 .footer-divider{height:1px;background:rgba(255,255,255,.15);margin-bottom:22px}
 .footer-bottom{font-size:12px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.6}
