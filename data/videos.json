@@ -9,7 +9,7 @@
     "level": 2,
     "levelLabel": "Intermediate",
     "description": "How deep learning models identify malignant regions in whole-slide images, outperforming traditional screening pipelines.",
-    "thumbnail": "assets/thumbnails/thumb_tumor_detection.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
@@ -22,7 +22,7 @@
     "level": 1,
     "levelLabel": "Introductory",
     "description": "A hands-on look at FDA-cleared AI tools for pneumonia and pneumothorax detection, and their integration into clinical workflows.",
-    "thumbnail": "assets/thumbnails/thumb_chest_xray.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
@@ -35,7 +35,7 @@
     "level": 2,
     "levelLabel": "Intermediate",
     "description": "Quantitative biomarker extraction from H&E stained slides using convolutional neural networks — clinical implications and caveats.",
-    "thumbnail": "assets/thumbnails/thumb_computational_pathology.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
@@ -48,7 +48,7 @@
     "level": 1,
     "levelLabel": "Introductory",
     "description": "Real-world case studies of algorithmic bias in patient triage tools and what regulatory frameworks require from hospitals.",
-    "thumbnail": "assets/thumbnails/thumb_bias_fairness.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
@@ -61,7 +61,7 @@
     "level": 3,
     "levelLabel": "Advanced",
     "description": "How genome-wide association studies feed into patient risk stratification models and what they can — and cannot — predict.",
-    "thumbnail": "assets/thumbnails/thumb_polygenic_risk.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
@@ -74,7 +74,7 @@
     "level": 1,
     "levelLabel": "Introductory",
     "description": "Ambient voice AI, automated discharge summaries, and the liability questions every clinician should understand.",
-    "thumbnail": "assets/thumbnails/thumb_llm_documentation.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
@@ -87,7 +87,7 @@
     "level": 2,
     "levelLabel": "Intermediate",
     "description": "SAM, BioViL-T, and the new wave of large vision models pre-trained on radiology data — what clinicians need to understand.",
-    "thumbnail": "assets/thumbnails/thumb_foundation_models.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
@@ -100,7 +100,7 @@
     "level": 3,
     "levelLabel": "Advanced",
     "description": "Privacy-preserving model training without centralising patient data — key concepts, trade-offs, and Swiss regulatory context.",
-    "thumbnail": "assets/thumbnails/thumb_federated_learning.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
@@ -113,7 +113,7 @@
     "level": 2,
     "levelLabel": "Intermediate",
     "description": "Combining imaging, genomics, and clinical records to predict chemotherapy response — current evidence and limitations.",
-    "thumbnail": "assets/thumbnails/thumb_therapy_response.jpg",
+    "thumbnail": "assets/images/AdobeStock_1923058566-v2.jpg",
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   }
 ]
