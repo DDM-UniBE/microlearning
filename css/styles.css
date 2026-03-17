@@ -467,13 +467,13 @@ footer{background:#2a2a2a;padding:52px var(--pad) 28px}
 .contact-text p{font-size:15px;font-weight:300;color:var(--grey-dark);line-height:1.8;margin-bottom:28px}
 .contact-block{border-left:3px solid var(--red);padding:20px 0 20px 24px;margin-bottom:24px}
 .contact-block-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:8px}
-.contact-block-value{font-size:15px;font-weight:400;color:var(--black);line-height:1.5}
+.contact-block-value{font-size:15px;font-weight:300;color:var(--black);line-height:1.5}
 .contact-block-value a{color:var(--red);text-decoration:none;font-weight:700}
 .contact-block-value a:hover{text-decoration:underline}
 .contact-cta{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;padding:14px 28px;font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:background .2s}
 .contact-cta:hover{background:var(--red-dim)}
 .contact-cta svg{flex-shrink:0}
-.contact-map-block{background:var(--grey-pale);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.contact-map-block{background:var(--grey-pale);height:420px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .contact-map-inner{text-align:center;z-index:1;position:relative}
 .contact-map-inner svg{opacity:.25;margin-bottom:16px}
 .contact-address{font-size:13px;font-weight:300;color:var(--grey-dark);line-height:1.8;text-align:center}
