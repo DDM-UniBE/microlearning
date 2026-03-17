@@ -185,19 +185,23 @@ function initNav() {
 // ── INIT ──────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadVideos();
-  initNotifyForm();
   initNav();
+  initNotifyForm();
 
-  document.querySelectorAll('#area-filters input, #level-filters input')
-    .forEach(cb => cb.addEventListener('change', applyFilters));
+  // Library page only
+  if (document.getElementById('videoGrid')) {
+    loadVideos();
 
-  document.getElementById('searchInput').addEventListener('input', applyFilters);
-  document.getElementById('searchInput').addEventListener('keydown', e => {
-    if (e.key === 'Enter') applyFilters();
-  });
+    document.querySelectorAll('#area-filters input, #level-filters input')
+      .forEach(cb => cb.addEventListener('change', applyFilters));
 
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
-  });
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+    document.getElementById('searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') applyFilters();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+  }
 });
