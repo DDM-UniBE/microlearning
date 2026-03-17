@@ -126,7 +126,7 @@ nav a.active{border-bottom-color:var(--red);color:var(--red)}
 /* ── STAY UP TO DATE ── */
 .notify{
   background:var(--red);
-  padding:80px calc(var(--pad) * 2);
+  padding:80px var(--pad);
   display:flex;
   flex-direction:column;
   gap:32px;
@@ -154,7 +154,7 @@ nav a.active{border-bottom-color:var(--red);color:var(--red)}
 
 /* ── FOOTER ── */
 footer{background:#2a2a2a;padding:52px var(--pad) 28px}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:40px;padding-left:80px;padding-right:80px;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:40px;}
 .footer-tagline{font-size:clamp(18px,2vw,28px);font-weight:200;color:#fff;letter-spacing:0.08em;text-transform:uppercase;line-height:1.15;text-align:left;}
 .footer-logo-img{height:200px;width:auto;display:block}
 .footer-divider{height:1px;background:rgba(255,255,255,.15);margin-bottom:22px}
