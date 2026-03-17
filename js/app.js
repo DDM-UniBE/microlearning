@@ -33,6 +33,7 @@ function renderCards(videos) {
     card.dataset.duration = video.duration;
     card.dataset.level = video.level;
     card.dataset.levelLabel = video.levelLabel;
+    card.dataset.videoUrl = video.videoUrl;
     card.setAttribute('onclick', 'openModal(this)');
 
     card.innerHTML = `
@@ -109,7 +110,7 @@ function openModal(card) {
   document.getElementById('modalTitle').textContent = card.dataset.title;
   document.getElementById('modalDuration').textContent = card.dataset.duration;
   document.getElementById('modalSpeaker').textContent = card.dataset.speaker;
-  document.getElementById('modalIframe').src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0';
+  document.getElementById('modalIframe').src = card.dataset.videoUrl + '?autoplay=1&rel=0';
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
