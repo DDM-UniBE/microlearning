@@ -154,10 +154,11 @@ nav a.active{border-bottom-color:var(--red);color:var(--red)}
 
 /* ── FOOTER ── */
 footer{background:#2a2a2a;padding:52px var(--pad) 28px}
-.footer-top{display:flex;justify-content:flex-end;padding-bottom:40px;padding-right:60px}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:40px;padding-right:60px;}
 .footer-logo-img{height:200px;width:auto;display:block}
 .footer-divider{height:1px;background:rgba(255,255,255,.15);margin-bottom:22px}
 .footer-bottom{font-size:12px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.6}
+.footer-tagline{font-size:clamp(18px,2vw,28px);font-weight:700;color:#fff;letter-spacing:0.08em;text-transform:uppercase;line-height:1.15;}
 
 /* ── ANIMS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
