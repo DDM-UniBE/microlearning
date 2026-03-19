@@ -186,65 +186,6 @@ footer{background:#2a2a2a;padding:52px var(--pad) 28px}
 .modal-like-btn.liked { border-color: #C8102E; color: #C8102E; }
 .modal-like-btn.liked svg { fill: #C8102E; }
 
-.modal-comments {
-  padding: 0 22px 18px;
-  border-top: 1px solid #2e2e2e;
-}
-.modal-comment-list {
-  max-height: 140px;
-  overflow-y: auto;
-  margin-bottom: 12px;
-  padding-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.modal-comment {
-  font-size: 12px;
-  color: #bbb;
-  line-height: 1.5;
-}
-.comment-author {
-  font-weight: 700;
-  color: #ddd;
-  margin-right: 6px;
-}
-.modal-comment-form {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.modal-comment-form input {
-  background: #1a1a1a;
-  border: 1px solid #333;
-  color: #fff;
-  padding: 8px 12px;
-  font-size: 12px;
-  font-family: var(--font);
-  outline: none;
-  width: 100%;
-}
-.modal-comment-form input::placeholder { color: #555; }
-.comment-input-row {
-  display: flex;
-  gap: 8px;
-}
-.comment-input-row input { flex: 1; }
-.comment-input-row button {
-  background: #C8102E;
-  border: none;
-  color: #fff;
-  padding: 0 16px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-family: var(--font);
-  transition: background .18s;
-}
-.comment-input-row button:hover { background: #9a0d23; }
-
 /* ── Medium laptops (1100–1280px): sidebar narrows, 3 cards ── */
 @media(max-width:1280px) and (min-width:1101px){
   .sidebar{width:260px;padding:40px 28px 60px 0}
