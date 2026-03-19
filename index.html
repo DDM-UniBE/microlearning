@@ -104,12 +104,43 @@
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
     <div class="modal-video"><iframe id="modalIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-    <div class="modal-footer">
-      <div class="modal-meta">
-        <span><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3v3l2 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><span id="modalDuration"></span></span>
-        <span><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="4" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M2 10c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><span id="modalSpeaker"></span></span>
-      </div>
-      <div class="modal-inst">Dept. of Digital Medicine · UNIBE</div>
+<div class="modal-footer">
+  <div class="modal-meta">
+    <span>
+      <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+        <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M6 3v3l2 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span id="modalDuration"></span>
+    </span>
+    <span>
+      <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+        <circle cx="6" cy="4" r="2" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M2 10c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span id="modalSpeaker"></span>
+    </span>
+  </div>
+
+  <!-- Like button -->
+  <button class="modal-like-btn" id="modalLikeBtn" onclick="toggleLike()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+    </svg>
+    <span id="modalLikeCount">0</span>
+  </button>
+
+  <div class="modal-inst">Dept. of Digital Medicine · UNIBE</div>
+</div>
+
+<!-- Comments section -->
+<div class="modal-comments">
+  <div class="modal-comment-list" id="modalCommentList"></div>
+  <div class="modal-comment-form">
+    <input type="text" id="modalCommentName" placeholder="Your name (optional)"/>
+    <div class="comment-input-row">
+      <input type="text" id="modalCommentInput" placeholder="Add a comment…"/>
+      <button onclick="submitComment()">Post</button>
     </div>
   </div>
 </div>
