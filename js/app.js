@@ -34,7 +34,6 @@ function renderCards(videos) {
     card.dataset.level = video.level;
     card.dataset.levelLabel = video.levelLabel;
     card.dataset.videoUrl = video.videoUrl;
-    card.dataset.id = video.id;
     card.setAttribute('onclick', 'openModal(this)');
 
     card.innerHTML = `
@@ -114,8 +113,6 @@ function openModal(card) {
   document.getElementById('modalIframe').src = card.dataset.videoUrl + '?autoplay=1&rel=0';
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
-
-  loadInteractions(card.dataset.id); // ← add this
 }
 
 function closeModal() {
@@ -183,73 +180,6 @@ function initNav() {
       navToggle.setAttribute('aria-expanded', 'false');
     }
   });
-}
-
-// ── INTERACTIONS ──────────────────────────────────────────────────────────────
-
-function getStore() {
-  return JSON.parse(localStorage.getItem('digimedInteractions') || '{}');
-}
-function saveStore(store) {
-  localStorage.setItem('digimedInteractions', JSON.stringify(store));
-}
-
-function loadInteractions(videoId) {
-  const store = getStore();
-  const data = store[videoId] || { liked: false, likes: 0, comments: [] };
-
-  // Like button
-  const likeBtn = document.getElementById('modalLikeBtn');
-  likeBtn.dataset.id = videoId;
-  likeBtn.classList.toggle('liked', data.liked);
-  document.getElementById('modalLikeCount').textContent = data.likes;
-
-  // Comments
-  const list = document.getElementById('modalCommentList');
-  list.innerHTML = data.comments.map(c => `
-    <div class="modal-comment">
-      <span class="comment-author">${escapeHtml(c.author)}</span>
-      <span class="comment-text">${escapeHtml(c.text)}</span>
-    </div>
-  `).join('');
-
-  document.getElementById('modalCommentInput').value = '';
-  document.getElementById('modalCommentName').value = '';
-}
-
-function toggleLike() {
-  const btn = document.getElementById('modalLikeBtn');
-  const videoId = btn.dataset.id;
-  const store = getStore();
-  const data = store[videoId] || { liked: false, likes: 0, comments: [] };
-
-  data.liked = !data.liked;
-  data.likes += data.liked ? 1 : -1;
-  store[videoId] = data;
-  saveStore(store);
-
-  btn.classList.toggle('liked', data.liked);
-  document.getElementById('modalLikeCount').textContent = data.likes;
-}
-
-function submitComment() {
-  const btn = document.getElementById('modalLikeBtn');
-  const videoId = btn.dataset.id;
-  const name = document.getElementById('modalCommentName').value.trim();
-  const text = document.getElementById('modalCommentInput').value.trim();
-  if (!text) return;
-
-  const store = getStore();
-  const data = store[videoId] || { liked: false, likes: 0, comments: [] };
-  data.comments.push({ author: name || 'Anonymous', text });
-  store[videoId] = data;
-  saveStore(store);
-
-  loadInteractions(videoId);
-}
-
-function escapeHtml(str) {
-  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
