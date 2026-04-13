@@ -27,6 +27,7 @@ function renderCards(videos) {
 
     const card = document.createElement('div');
     card.className = 'video-card';
+    card.dataset.id = video.id;
     card.dataset.tag = video.tag;
     card.dataset.title = video.title;
     card.dataset.speaker = video.speaker;
@@ -103,9 +104,35 @@ function toggleFilter(h) {
   h.nextElementSibling.classList.toggle('hidden');
 }
 
+// ── LIKES ─────────────────────────────────────────────────────────────────────
+
+function getLikeData(videoId) {
+  try {
+    const stored = JSON.parse(localStorage.getItem('ddm_likes') || '{}');
+    return stored[videoId] || { count: 0, liked: false };
+  } catch (e) {
+    return { count: 0, liked: false };
+  }
+}
+
+function saveLikeData(videoId, liked) {
+  try {
+    const stored = JSON.parse(localStorage.getItem('ddm_likes') || '{}');
+    const current = stored[videoId] || { count: 0, liked: false };
+    const newCount = liked ? current.count + 1 : Math.max(0, current.count - 1);
+    stored[videoId] = { count: newCount, liked };
+    localStorage.setItem('ddm_likes', JSON.stringify(stored));
+    return newCount;
+  } catch (e) {
+    return 0;
+  }
+}
+
 // ── MODAL ─────────────────────────────────────────────────────────────────────
 
 function openModal(card) {
+  const videoId = 'video_' + card.dataset.id;
+
   document.getElementById('modalTag').textContent = card.querySelector('.card-tag').textContent;
   document.getElementById('modalTitle').textContent = card.dataset.title;
   document.getElementById('modalDuration').textContent = card.dataset.duration;
@@ -113,6 +140,22 @@ function openModal(card) {
   document.getElementById('modalIframe').src = card.dataset.videoUrl + '?autoplay=1&rel=0';
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  // Restore like state for this specific video
+  const likeBtn = document.getElementById('modalLikeBtn');
+  if (likeBtn) {
+    const { count, liked } = getLikeData(videoId);
+    likeBtn.classList.toggle('liked', liked);
+    likeBtn.querySelector('.like-count').textContent = count;
+
+    // Replace onclick to avoid stacking listeners across multiple modal opens
+    likeBtn.onclick = () => {
+      const isNowLiked = !likeBtn.classList.contains('liked');
+      likeBtn.classList.toggle('liked', isNowLiked);
+      const newCount = saveLikeData(videoId, isNowLiked);
+      likeBtn.querySelector('.like-count').textContent = newCount;
+    };
+  }
 }
 
 function closeModal() {
