@@ -122,6 +122,8 @@ nav a.active{border-bottom-color:var(--red);color:var(--red)}
 .modal-meta{font-size:11px;color:#666;display:flex;gap:18px}
 .modal-meta span{display:flex;align-items:center;gap:5px}
 .modal-inst{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#999999}
+#modalLikeBtn{display:none}
+
 
 /* ── STAY UP TO DATE ── */
 .notify{
